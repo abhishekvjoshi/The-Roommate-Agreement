@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="email_array">
+        <item>jerry@gmail.com</item>
+        <item>richard@gmail.com</item>
+        <item>tom@yahoo.com</item>
+        <item>jack@yahoo.com</item>
+        <item>jackie@hotmail.com</item>
+        <item>rick@gmail.com</item>
+        <item>rain@yahoo.com</item>
+        <item>steven@gmail.com</item>
+    </string-array>
+</resources>

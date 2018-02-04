@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.VisibleForTesting;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -70,6 +71,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnSignup = (Button) findViewById(R.id.btn_signup);
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnReset = (Button) findViewById(R.id.btn_reset_password);
+        TextInputLayout emailLayout = (TextInputLayout) findViewById(R.id.login_email_layout);
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
@@ -249,20 +251,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                 });
     }
-//
-//    private void revokeAccess() {
-//        // Firebase sign out
-//        mAuth.signOut();
-//
-//        // Google revoke access
-//        mGoogleSignInClient.revokeAccess().addOnCompleteListener(this,
-//                new OnCompleteListener<Void>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<Void> task) {
-//                        updateUI(null);
-//                    }
-//                });
-//    }
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {

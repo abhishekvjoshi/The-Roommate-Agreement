@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/white"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin">
@@ -23,33 +23,25 @@
             android:layout_marginBottom="30dp"
             android:src="@mipmap/ic_launcher" />
 
-        <android.support.design.widget.TextInputLayout
+        <Spinner
+            android:id="@+id/emailSpinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textColor="@android:color/white" />
-
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:dropDownSelector="@color/bg_login"
+            android:entries="@array/email_array"
+            android:prompt="@string/app_name"
+            android:spinnerMode="dropdown" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/cell_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusableInTouchMode="true"
-                android:hint="@string/hint_password"
-                android:imeActionId="@+id/login"
+                android:hint="Cell Number"
                 android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
                 android:maxLines="1"
@@ -58,21 +50,28 @@
 
         </android.support.design.widget.TextInputLayout>
 
+        <Spinner
+            android:id="@+id/nationalitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dropDownSelector="@color/bg_login"
+            android:entries="@array/email_array"
+            android:prompt="@string/app_name"
+            android:spinnerMode="dropdown" />
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/password_confirmation"
+                android:id="@+id/personal_note"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusableInTouchMode="true"
-                android:hint="@string/hint_password"
-                android:imeActionId="@+id/login"
+                android:hint="Personal note"
                 android:imeOptions="actionUnspecified"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:singleLine="true"
+                android:maxLines="10"
+                android:inputType="textMultiLine"
                 android:textColor="@android:color/white" />
 
         </android.support.design.widget.TextInputLayout>
@@ -83,20 +82,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@color/colorAccent"
+            android:background="@color/colorPrimaryDark"
             android:text="@string/action_sign_in_short"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn_reset_password"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:background="@null"
-            android:text="@string/btn_forgot_password"
-            android:textAllCaps="false"
-            android:textColor="@color/colorAccent" />
 
         <!-- Link to Login Screen -->
 
