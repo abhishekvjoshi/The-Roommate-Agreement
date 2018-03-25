@@ -25,6 +25,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -41,6 +42,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private ProgressBar progressBar;
     private Button btnSignup, btnLogin, btnReset;
     private FirebaseUser currentUser;
+    private SignInButton signInButton;
 
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 9001;
@@ -72,6 +74,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnReset = (Button) findViewById(R.id.btn_reset_password);
         TextInputLayout emailLayout = (TextInputLayout) findViewById(R.id.login_email_layout);
+        signInButton = (SignInButton) findViewById(R.id.google_sign_in_button);
+        signInButton.setColorScheme(SignInButton.COLOR_DARK);
+//        signInButton.setTextAlignment(SignInButton.TEXT_ALIGNMENT_TEXT_START);
+        signInButton.setSize(SignInButton.SIZE_WIDE);
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
@@ -134,7 +140,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-        findViewById(R.id.sign_in_button).setOnClickListener(this);
+        findViewById(R.id.google_sign_in_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);
 
         // [START config_signin]
@@ -160,7 +166,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         int i = v.getId();
-        if (i == R.id.sign_in_button) {
+        if (i == R.id.google_sign_in_button) {
             signIn();
         } else if (i == R.id.sign_out_button) {
             signOut();
@@ -255,7 +261,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void updateUI(FirebaseUser user) {
         if (user != null) {
 
-            findViewById(R.id.sign_in_button).setVisibility(View.GONE);
+            findViewById(R.id.google_sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
 
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -263,7 +269,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             finish();
         } else {
 
-            findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
+            findViewById(R.id.google_sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_button).setVisibility(View.GONE);
         }
     }
