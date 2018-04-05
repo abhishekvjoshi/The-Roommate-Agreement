@@ -29,15 +29,16 @@ public class SignupValidations {
         return false;
     }
 
-    public static void isValidPassword(final String password) {
+    public static boolean isValidPassword(final String password) {
 
         if (!password.matches(PASSWORD_PATTERN)) {
             passwordLayout.setError("Password must satisfy the following conditions: minimum length 8, 1 digit, 1 Uppercase character, 1 lower case character, 1 special character.");
+            return false;
         }
         else {
             passwordLayout.setErrorEnabled(false);
         }
-        return;
+        return true;
     }
 
     public static boolean isValidPasswordConfirmation(final String confirmationPassword,

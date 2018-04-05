@@ -1,93 +1,11 @@
 {
   "project_info": {
     "project_number": "826154258788",
-    "project_id": "firebase-the-roommate-agreemen"
+    "firebase_url": "https://fir-the-roommate-agreemen.firebaseio.com",
+    "project_id": "firebase-the-roommate-agreemen",
+    "storage_bucket": "firebase-the-roommate-agreemen.appspot.com"
   },
   "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:826154258788:android:c404294e99ab36de",
-        "android_client_info": {
-          "package_name": "com.dreams.tma"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "826154258788-mj3ub7gkf9on83b15t7te2qcm42dl0cu.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.dreams.tma",
-            "certificate_hash": "4f861db500557efd56163b60668c53db99294156"
-          }
-        },
-        {
-          "client_id": "826154258788-phd86bqvnp8refoluhsm5rn2lk6qvud2.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC3kK2sWzZlnKLm0spwy4l2_tr935Er6cA"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 2,
-          "analytics_property": {
-            "tracking_id": "UA-112579944-1"
-          }
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 1
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:826154258788:android:bff2b307f152f9ff",
-        "android_client_info": {
-          "package_name": "com.dreams"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "826154258788-rmceq2bpu0uhnav8k5v6lr19cf3n74ke.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.dreams",
-            "certificate_hash": "4f861db500557efd56163b60668c53db99294156"
-          }
-        },
-        {
-          "client_id": "826154258788-phd86bqvnp8refoluhsm5rn2lk6qvud2.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC3kK2sWzZlnKLm0spwy4l2_tr935Er6cA"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 2,
-          "analytics_property": {
-            "tracking_id": "UA-112579944-1"
-          }
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 1
-        }
-      }
-    },
     {
       "client_info": {
         "mobilesdk_app_id": "1:826154258788:android:1d282623fb3e8fd5",
@@ -97,12 +15,16 @@
       },
       "oauth_client": [
         {
-          "client_id": "826154258788-2cme8b6a5li6aq27gr0r9ovjbmhgojrc.apps.googleusercontent.com",
+          "client_id": "826154258788-dms839plb6a32ak4hkrbhjfgljeo9uge.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.dreams.theroommateagreement",
             "certificate_hash": "4f861db500557efd56163b60668c53db99294156"
           }
+        },
+        {
+          "client_id": "826154258788-4vk5amesdp4bhjd73peljuuv9ftjcclr.apps.googleusercontent.com",
+          "client_type": 3
         },
         {
           "client_id": "826154258788-phd86bqvnp8refoluhsm5rn2lk6qvud2.apps.googleusercontent.com",

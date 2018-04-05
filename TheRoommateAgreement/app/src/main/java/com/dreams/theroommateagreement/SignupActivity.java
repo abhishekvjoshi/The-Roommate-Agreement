@@ -35,9 +35,6 @@ public class SignupActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     static TextInputLayout passwordLayout;
-//    static TextInputLayout passwordConfirmationLayout;
-
-//    private static final String PASSWORD_PATTERN = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +67,10 @@ public class SignupActivity extends AppCompatActivity {
                 final String password = inputPassword.getText().toString().trim();
                 final String passwordConfirmation = inputPasswordConfirmation.getText().toString().trim();
 
-                if (SignupValidations.isValidEmail(email)
-                    || SignupValidations.isValidPassword(password)
-                    || SignupValidations.isValidPasswordConfirmation(passwordConfirmation, password)) {
-
+                if (!SignupValidations.isValidEmail(email)
+                    || !SignupValidations.isValidPassword(password)
+                    || !SignupValidations.isValidPasswordConfirmation(passwordConfirmation, password)) {
+                    return;
                 }
 
 
@@ -105,10 +102,10 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "Registration failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 }
-                                startActivity(new Intent(SignupActivity.this, MainActivity.class));
+                                startActivity(new Intent(SignupActivity.this, SignupActivity.class));
                                 finish();
                             } else {
-                                startActivity(new Intent(SignupActivity.this, MainActivity.class));
+                                startActivity(new Intent(SignupActivity.this, AdPostingActivity.class));
                                 finish();
                             }
                         }

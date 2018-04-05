@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         auth = FirebaseAuth.getInstance();
 
         if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            startActivity(new Intent(LoginActivity.this, AdPostingActivity.class));
             finish();
         }
 
@@ -131,7 +131,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, AdPostingActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -146,7 +146,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         // [START config_signin]
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                /*.requestIdToken(getString(R.string.default_web_client_id))*/
                 .requestEmail()
                 .build();
 
@@ -264,7 +264,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             findViewById(R.id.google_sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
 
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, AdPostingActivity.class);
             startActivity(intent);
             finish();
         } else {
