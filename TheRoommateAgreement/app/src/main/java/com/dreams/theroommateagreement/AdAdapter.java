@@ -102,10 +102,10 @@ public class AdAdapter extends RecyclerView.Adapter<AdAdapter.AdViewHolder>{
 
     private void applyImportant(AdViewHolder holder, RoommateAdvertisement message) {
         if (message.isImportant()) {
-            holder.iconImp.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_star_border_black_24dp));
+            holder.iconImp.setImageDrawable(ContextCompat.getDrawable(mContext, R.mipmap.ic_launcher_foreground));
             holder.iconImp.setColorFilter(ContextCompat.getColor(mContext, R.color.icon_tint_selected));
         } else {
-            holder.iconImp.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_star_border_black_24dp));
+            holder.iconImp.setImageDrawable(ContextCompat.getDrawable(mContext, R.mipmap.ic_launcher_foreground));
             holder.iconImp.setColorFilter(ContextCompat.getColor(mContext, R.color.icon_tint_normal));
         }
     }

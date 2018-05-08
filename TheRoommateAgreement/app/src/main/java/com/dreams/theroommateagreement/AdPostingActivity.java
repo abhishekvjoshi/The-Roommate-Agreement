@@ -1,10 +1,13 @@
 package com.dreams.theroommateagreement;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +43,15 @@ public class AdPostingActivity extends AppCompatActivity implements SwipeRefresh
         mRecyclerView.setAdapter(mAdapter);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
         swipeRefreshLayout.setOnRefreshListener(this);
+
+        FloatingActionButton createAdButton = (FloatingActionButton) findViewById(R.id.createAdButton);
+        createAdButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdPostingActivity.this, AdCreatorActivity.class));
+
+            }
+        });
 
         // show loader and fetch messages
         swipeRefreshLayout.post(

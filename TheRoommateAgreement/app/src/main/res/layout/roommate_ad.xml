@@ -58,11 +58,11 @@
 
         <ImageView
             android:id="@+id/icon_star"
-            android:layout_width="17dp"
-            android:layout_height="@dimen/icon_star"
+            android:layout_width="51dp"
+            android:layout_height="42dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="14dp"
-            android:src="@mipmap/ic_star_black_round"
+            android:layout_marginEnd="0dp"
+            android:src="@mipmap/ic_launcher_foreground"
             android:tint="@color/icon_tint_normal" />
 
     </RelativeLayout>

@@ -10,10 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,9 +21,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-
-import org.w3c.dom.Text;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -73,19 +67,6 @@ public class SignupActivity extends AppCompatActivity {
                     return;
                 }
 
-
-
-
-//                if (TextUtils.isEmpty(email)) {
-//                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                if (TextUtils.isEmpty(password)) {
-//                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-
                 progressBar.setVisibility(View.VISIBLE);
                 //create user
                 auth.createUserWithEmailAndPassword(email, password)
@@ -121,36 +102,6 @@ public class SignupActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
     }
 
-//    private boolean isRegisted(@NonNull Task<AuthResult> task) {
-//        if (task.getException() instanceof FirebaseAuthUserCollisionException) {
-//            Toast.makeText(SignupActivity.this, "This email address is already registered!",
-//                    Toast.LENGTH_SHORT).show();
-//            return true;
-//        }
-//        return false;
-//    }
-//
-//    private void isValidPassword(final String password) {
-//
-//        if (!password.matches(PASSWORD_PATTERN)) {
-//            passwordLayout.setError("Password must satisfy the following conditions: minimum length 8, 1 digit, 1 Uppercase character, 1 lower case character, 1 special character.");
-//        }
-//        else {
-//            passwordLayout.setErrorEnabled(false);
-//        }
-//        return;
-//    }
-//
-//    private boolean isValidPasswordConfirmation(final String confirmationPassword,
-//                                             final String password) {
-//        return password.equals(confirmationPassword);
-//    }
-//
-//    private boolean isValidEmail(final String email) {
-//        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
-//
-//    }
-
     private void getInstances() {
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
@@ -161,7 +112,6 @@ public class SignupActivity extends AppCompatActivity {
         inputPassword = (EditText) findViewById(R.id.password);
         inputPasswordConfirmation = (EditText) findViewById(R.id.password_confirmation);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-//        final TextInputLayout emailLayout = (TextInputLayout) findViewById(R.id.password_layout);
         passwordLayout = (TextInputLayout) findViewById(R.id.password_layout);
     }
 

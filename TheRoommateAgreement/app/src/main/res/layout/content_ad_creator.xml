@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AdCreatorActivity"
+    tools:showIn="@layout/activity_ad_creator">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_userDisplayImage"
+            android:layout_width="61dp"
+            android:layout_height="57dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="26dp" />
+
+        <TextView
+            android:id="@+id/textView_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="93dp"
+            android:layout_toEndOf="@+id/imageView_userDisplayImage"
+            android:text="userName"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_adMoveDatePreference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_adCityPreference"
+            android:layout_marginStart="93dp"
+            android:layout_toRightOf="@+id/imageView_userDisplayImage"
+            android:text="userMoveDate"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner_adMoveDatePreference"
+            android:layout_width="109dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/textView_adMoveDatePreference"
+            android:layout_toEndOf="@+id/textView_adBudgetMaximum"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/textView_adCityPreference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_userName"
+            android:layout_marginStart="93dp"
+            android:layout_toRightOf="@+id/imageView_userDisplayImage"
+            android:text="userCity"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_adCityPreference"
+            android:layout_width="166dp"
+            android:layout_height="21dp"
+            android:layout_alignBottom="@+id/textView_adCityPreference"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView_adIsApartmentAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_adMoveDatePreference"
+            android:layout_marginStart="93dp"
+            android:layout_toRightOf="@+id/imageView_userDisplayImage"
+            android:text="Apt. Available ?"
+            android:textSize="16sp" />
+
+        <Switch
+            android:id="@+id/switch_adIsApartmentAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imageView_userDisplayImage"
+            android:layout_marginEnd="89dp" />
+
+        <TextView
+            android:id="@+id/textView_adGenderPreference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_adIsApartmentAvailable"
+            android:layout_marginStart="93dp"
+            android:layout_toRightOf="@+id/imageView_userDisplayImage"
+            android:text="Gender"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner_adGenderPreference"
+            android:layout_width="109dp"
+            android:layout_height="25dp"
+            android:layout_alignStart="@+id/spinner_adMoveDatePreference"
+            android:layout_below="@+id/textView_adIsApartmentAvailable"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/textView_adNationalityPreference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_adGenderPreference"
+            android:layout_marginStart="93dp"
+            android:layout_toRightOf="@+id/imageView_userDisplayImage"
+            android:text="Nationality"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner_adNationalityPreference"
+            android:layout_width="109dp"
+            android:layout_height="25dp"
+            android:layout_alignStart="@+id/spinner_adMoveDatePreference"
+            android:layout_below="@+id/textView_adGenderPreference"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/adBudgetMiniumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_adNationalityPreference"
+            android:layout_marginStart="93dp"
+            android:layout_toRightOf="@+id/imageView_userDisplayImage"
+            android:text="Bugdet Minimum"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_adBudgetMinimumValue"
+            android:layout_width="168dp"
+            android:layout_height="21dp"
+            android:layout_alignBottom="@+id/adBudgetMiniumTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView_adBudgetMaximum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/adBudgetMiniumTextView"
+            android:layout_marginStart="93dp"
+            android:layout_toRightOf="@+id/imageView_userDisplayImage"
+            android:text="Bugdet Maximum"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_adBudgetMaximumValue"
+            android:layout_width="166dp"
+            android:layout_height="21dp"
+            android:layout_alignBottom="@+id/textView_adBudgetMaximum"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/editText_adComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_adBudgetMaximum"
+            android:layout_marginStart="93dp"
+            android:layout_toRightOf="@+id/imageView_userDisplayImage"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+
+        <Button
+            android:id="@+id/button_postAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="187dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
